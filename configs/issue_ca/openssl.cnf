@@ -25,16 +25,16 @@ init                        = 0
 default_ca                  = CA_default
 
 [ CA_default ]
-dir                         = /srv/pki/var/service-policy-ca-01.dum.my
-certs                       = $dir/certs
-crl_dir                     = /srv/pki/var/html
-database                    = /srv/pki/var/service-policy-ca-01.dum.my/index
-new_certs_dir               = /srv/pki/var/html
-certificate	                = /srv/pki/var/ca/service-policy-ca-01.dum.my.crt.pem
-serial                      = /srv/pki/var/service-policy-ca-01.dum.my/serial
-crlnumber                   = $dir/crlnumber
-crl                         = $dir/crl.pem
-private_key                 = /srv/pki/var/service-policy-ca-01.dum.my/private/service-policy-ca-01.dum.my.key.pem
+dir                         = ./tmp/
+certs                       = ./tmp/
+crl_dir                     = ./tmp/
+database                    = ./tmp/issue_index
+new_certs_dir               = ./tmp/
+certificate                 = ./tmp/issue_ca.crt.pem
+serial                      = ./tmp/issue_serial
+crlnumber                   = ./tmp/issue_crlnumber
+crl                         = ./tmp/issue_crl.pem
+private_key                 = ./tmp/issue_ca.crt.pem
 x509_extensions             = usr_cert
 name_opt                    = ca_default
 cert_opt                    = ca_default

@@ -6,7 +6,6 @@ init_vars_and_dirs () {
   printf "/functions/init_vars_and_dirs.sh \n"
   printf "####################################### \n"
 
-  # export YUBIHSM_PKCS11_CONF=./yubihsm_pkcs11.conf
   export YUBIHSM_PKCS11_DBG=true
   export HSM_SLOT=0
   export FACTORY_KEY=1
