@@ -9,10 +9,10 @@ Requirement
 To run the script the following preparations must be made:
 
 - Install:
- - OpenSSL
- - YubiHSM-Shell
- - YubiHSM OpenSSL engine
-- An YubiHSM2 in facktory reset state
+  - OpenSSL
+  - YubiHSM-Shell
+  - YubiHSM OpenSSL engine
+- An YubiHSM2 hardware in facktory reset state
 
 
 Warning
@@ -32,7 +32,7 @@ sudo ./demo_script.sh
 With more output enter:
 
 ```bash
-sudo -e -x demo_script.sh
+sudo -x demo_script.sh
 ```
 
 Directories
