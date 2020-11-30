@@ -2,9 +2,6 @@ HOME                        = .
 
 openssl_conf                = default_modules
 
-###############################################################################
-# YubiHSM2 enabeting
-
 [default_modules]
 engines                     = engine_section
 
@@ -17,9 +14,6 @@ MODULE_PATH                 = /usr/lib64/pkcs11/yubihsm_pkcs11.so
 INIT_ARGS                   = connector=http://127.0.0.1:12345 debug
 PIN                         = "0002password2"
 init                        = 0
-
-###############################################################################
-
 
 [ ca ]
 default_ca                  = CA_default
