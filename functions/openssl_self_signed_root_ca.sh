@@ -39,4 +39,14 @@ openssl_self_signed_root_ca () {
     -keyform engine                                                           \
     -out ${DEMO_TMP_DIR}/root_ca-v2.crt.pem
 
+
+  printf "#-------------------------------------# \n"
+  printf "Check root ca certifikat...\n"
+  printf "#-------------------------------------# \n"
+
+  openssl x509                                                                \
+    -in ${DEMO_TMP_DIR}/root_ca.crt.pem                                       \
+    -noout                                                                    \
+    -text
+
 }

@@ -8,9 +8,8 @@ openssl_create_intermediate_ca_csr () {
   printf "####################################### \n"
 
   printf "#-------------------------------------# \n"
-  printf "...With key format variation: ${HSM_SLOT}:000${ROOT_CA_KEY}\n"
+  printf "With key format variation: ${HSM_SLOT}:000${ROOT_CA_KEY}\n"
   printf "#-------------------------------------# \n"
-
 
   openssl req                                                                 \
     -new                                                                      \
@@ -23,7 +22,7 @@ openssl_create_intermediate_ca_csr () {
     -out ${DEMO_TMP_DIR}/issue_ca.csr.pem
 
   printf "#-------------------------------------# \n"
-  printf "...With key format variation: slot_${HSM_SLOT}-id_000${ROOT_CA_KEY}\n"
+  printf "With key format variation: slot_${HSM_SLOT}-id_000${ROOT_CA_KEY}\n"
   printf "#-------------------------------------# \n"
 
 
@@ -37,5 +36,13 @@ openssl_create_intermediate_ca_csr () {
     -keyform engine                                                           \
     -out ${DEMO_TMP_DIR}/issue_ca-v2.csr.pem
 
+  printf "#-------------------------------------# \n"
+  printf "Check CSR file...\n"
+  printf "#-------------------------------------# \n"
+
+  openssl req                                                                 \
+    -in ${DEMO_TMP_DIR}/issue_ca.csr.pem                                      \
+    -noout                                                                    \
+    -text
 
 }

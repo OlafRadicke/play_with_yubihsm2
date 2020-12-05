@@ -74,7 +74,7 @@ stateOrProvinceName         = Dummyfild
 localityName                = Dummy Town
 organizationName            = Dummy GmbH
 organizationalUnitName      = Security department
-commonName                  = issue-ca.org
+commonName                  = root-ca.dum.my
 emailAddress                = ca-admin@dum.my
 
 [ req_attributes ]

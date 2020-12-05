@@ -41,3 +41,8 @@ Directories
 - ***/configs/[issue|root]_ca/*** - the configuration files of the ca
 - ***/functions*** - the bash (sub-)scripts
 - ***/tmp*** - the place of logs, certifikats, csr and other generated things.
+
+Helpful documentation
+---------------------
+
+- [OpenSSL with pkcs11 engine](https://developers.yubico.com/YubiHSM2/Usage_Guides/OpenSSL_with_pkcs11_engine.html)
