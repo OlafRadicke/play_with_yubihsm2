@@ -46,3 +46,5 @@ Helpful documentation
 ---------------------
 
 - [OpenSSL with pkcs11 engine](https://developers.yubico.com/YubiHSM2/Usage_Guides/OpenSSL_with_pkcs11_engine.html)
+- [yubihsm-shell on GitHub](https://github.com/Yubico/yubihsm-shell)
+- []()
