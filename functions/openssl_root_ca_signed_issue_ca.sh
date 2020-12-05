@@ -6,6 +6,9 @@ openssl_root_ca_signed_issue_ca () {
   printf "/functions/openssl_root_ca_signed_issue_ca.sh \n"
   printf "####################################### \n"
 
+  printf "#-------------------------------------# \n"
+  printf "With key format variation: ${HSM_SLOT}:000${ROOT_CA_KEY}\n"
+  printf "#-------------------------------------# \n"
 
   OPENSSL_CONF=${DEMO_CONFIG_DIR}/root_ca/openssl.cnf                         \
   openssl x509                                                                \
@@ -18,6 +21,22 @@ openssl_root_ca_signed_issue_ca () {
     -CAkey "${HSM_SLOT}:000${ROOT_CA_KEY}"                                    \
     -sha256                                                                   \
     -out ${DEMO_TMP_DIR}/issue_ca.crt.pem
+
+  printf "#-------------------------------------# \n"
+  printf "...With key format variation: slot_${HSM_SLOT}-id_000${ROOT_CA_KEY}\n"
+  printf "#-------------------------------------# \n"
+
+  OPENSSL_CONF=${DEMO_CONFIG_DIR}/root_ca/openssl.cnf                         \
+  openssl x509                                                                \
+    -req                                                                      \
+    -engine pkcs11                                                            \
+    -in ${DEMO_TMP_DIR}/issue_ca.csr.pem                                      \
+    -CA ${DEMO_TMP_DIR}/root_ca.crt.pem                                       \
+    -CAcreateserial                                                           \
+    -CAkeyform engine                                                         \
+    -CAkey "slot_${HSM_SLOT}-id_000${ROOT_CA_KEY}"                            \
+    -sha256                                                                   \
+    -out ${DEMO_TMP_DIR}/issue_ca-v2.crt.pem
 
   printf "#-------------------------------------# \n"
   printf "Check certifikat...\n"
