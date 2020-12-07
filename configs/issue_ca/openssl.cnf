@@ -39,6 +39,7 @@ preserve                    = no
 policy                      = policy_anything
 email_in_dn                 = no
 rand_serial                 = no
+unique_subject              = no
 
 [ policy_match ]
 countryName                 = match

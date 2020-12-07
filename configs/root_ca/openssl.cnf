@@ -22,7 +22,7 @@ default_ca                  = CA_default
 dir                         = ./tmp/
 certs                       = ./tmp/
 crl_dir                     = ./tmp/
-database                    = ./tmp/index
+database                    = ./tmp/root_index
 new_certs_dir               = ./tmp/
 certificate                 = ./tmp/root_ca.crt.pem
 serial                      = ./tmp/serial
@@ -39,6 +39,7 @@ preserve                    = no
 policy                      = policy_match
 email_in_dn                 = no
 rand_serial                 = no
+unique_subject              = no
 
 [ policy_match ]
 countryName                 = match

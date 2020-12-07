@@ -34,7 +34,7 @@ openssl_root_ca_signed_issue_ca () {
   printf "Alternativ with openssl ca...\n"
   printf "#-------------------------------------# \n"
 
-  touch ${DEMO_TMP_DIR}/index
+  touch ${DEMO_TMP_DIR}/root_index
 
   openssl ca                                                                  \
     -config ${DEMO_CONFIG_DIR}/root_ca/openssl.cnf                            \
