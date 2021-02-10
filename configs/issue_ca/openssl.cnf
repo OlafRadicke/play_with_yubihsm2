@@ -12,6 +12,7 @@ pkcs11                      = pkcs11_section
 engine_id                   = pkcs11
 MODULE_PATH                 = /usr/lib64/pkcs11/yubihsm_pkcs11.so
 INIT_ARGS                   = connector=http://127.0.0.1:12345 debug
+# PIN format: "<auth key id><auth key password>"
 PIN                         = "0002password2"
 init                        = 0
 
