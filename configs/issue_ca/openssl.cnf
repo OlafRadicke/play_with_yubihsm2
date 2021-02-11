@@ -29,6 +29,7 @@ certificate                 = ./tmp/issue_ca.crt.pem
 serial                      = ./tmp/issue_serial
 crlnumber                   = ./tmp/issue_crlnumber
 crl                         = ./tmp/issue_crl.pem
+# Kef format:   <slot>:<key id>
 private_key                 = 0:0005
 x509_extensions             = usr_cert
 name_opt                    = ca_default
