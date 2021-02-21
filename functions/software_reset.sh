@@ -1,10 +1,10 @@
 
 
-software_rest() {
+software_reset() {
 
   printf "####################################### \n"
   printf "Sofware reset of YubiHSM2: \n"
-  printf "/functions/software_rest.sh \n"
+  printf "/functions/software_reset.sh \n"
   printf "####################################### \n"
 
   yubihsm-shell                                                               \

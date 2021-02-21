@@ -28,7 +28,7 @@ openssl_root_ca_signed_issue_ca () {
     -noout                                                                    \
     -text
 
-#####################################################################################
+###############################################################################
 
   printf "#-------------------------------------# \n"
   printf "Alternativ with openssl ca...\n"
@@ -53,14 +53,9 @@ openssl_root_ca_signed_issue_ca () {
   printf "Check certifikat v2...\n"
   printf "#-------------------------------------# \n"
 
-
   openssl x509                                                                \
-    -in ${DEMO_TMP_DIR}/issue_ca-v2.crt.pem                                      \
+    -in ${DEMO_TMP_DIR}/issue_ca-v2.crt.pem                                   \
     -noout                                                                    \
     -text
-
-# openssl ca -config ./openssl.cnf -extensions v3_intermediate_ca -days 1825 -notext -md sha256 -key 0:0001 -keyform engine -engine pkcs11 -in intermediate/csr/first.intermediate.csr.pem -out test.pem
-
-# -key 0:001 -engine pkcs11 -keyform engine
 
 }

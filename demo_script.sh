@@ -11,7 +11,7 @@ source ./functions/list_objects.sh
 source ./functions/openssl_create_intermediate_ca_csr.sh
 source ./functions/openssl_root_ca_signed_issue_ca.sh
 source ./functions/openssl_self_signed_root_ca.sh
-source ./functions/software_rest.sh
+source ./functions/software_reset.sh
 
 init_vars_and_dirs
 list_objects ${FACTORY_KEY} ${FACTORY_PASSWORD}
@@ -24,7 +24,7 @@ list_objects ${AUTH_KEY} ${AUTH_PASSWORD}
 openssl_create_intermediate_ca_csr
 openssl_self_signed_root_ca
 openssl_root_ca_signed_issue_ca
-software_rest
+software_reset
 sleep 2
 list_objects ${FACTORY_KEY} ${FACTORY_PASSWORD}
 
